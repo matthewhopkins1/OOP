@@ -8,25 +8,29 @@ class Student:
         self.__dob = b
         self.__classification = c
         self.__age = 0
-        self.__register = 0
+        self.__register = ''
 
 #create a method that will calculate students current age
 
-    def age(self, b):
-        self.__age = 
-
+    def calc_age(self):
+        today = date.today()
+        dob = self.__dob.split('/')
+        dob_year = int(dob[2])
+        self.__age = today.year - dob_year
         
 #create a method that will determine when student can register
 
     def register():
-        if self.__classification == Sr:
+        if self.__classification == 'Sr':
             self.__register = '4/1 thru 4/3'
-        elif self.__classification == Jr:
+        elif self.__classification == 'Jr':
             self.__register = '4/4 thru 4/6'
-        elif self.__classification == S:
+        elif self.__classification == 'S':
             self.__register = '4/7 thru 4/9'
-        else:
+        elif self.__classification ='F'
             self.__register = '4/10 thru 4/12'
+        else:
+            self.__register = 'Classification not found'
 
 #create a method to return age and another method to return registration dates
 
